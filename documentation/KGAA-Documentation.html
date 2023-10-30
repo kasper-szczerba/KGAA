@@ -1,0 +1,274 @@
+<!DOCTYPE html><html><head>
+      <title>KGAA-Documentation</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h2 id="kaspers-generic-atmega328p-api-br-kgaa---omit-from-toc--">Kasper's Generic ATmega328P API <br> (KGAA) <!-- omit from toc --> </h2>
+<p>Still work in progress!</p>
+<p><a href="https://git.fhict.nl/I524725/t-2-db-pers-2324-nj-kasper-szczerba/-/tree/main/Embedded-Systems/Projects/KGAA">Download</a></p>
+<h3 id="introduction">Introduction </h3>
+<p>This is a generic API for the ATmega328P microcontroller. It is written in C and is intended to be used with the Arduino Uno. The API is written to be as simple as possible, while still being powerful enough to be used in most projects.</p>
+<div style="page-break-after: always;"></div>
+<h3 id="table-of-contents---omit-from-toc--">Table of Contents <!-- omit from toc --> </h3>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#arduino-uno-pinout">Arduino Uno pinout</a></li>
+<li><a href="#getting-started">Getting Started</a>
+<ul>
+<li><a href="#basic-blink-example">Basic blink example</a>
+<ul>
+<li><a href="#code">Code</a></li>
+<li><a href="#explanation">Explanation</a></li>
+</ul>
+</li>
+<li><a href="#basic-analog-read-example">Basic analog read example</a>
+<ul>
+<li><a href="#code-1">Code</a></li>
+<li><a href="#explanation-1">Explanation</a></li>
+</ul>
+</li>
+<li><a href="#basic-semi-dynamic-array-example">Basic semi-dynamic array example</a>
+<ul>
+<li><a href="#code-2">Code</a></li>
+<li><a href="#explanation-2">Explanation</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#analog">Analog</a>
+<ul>
+<li><a href="#initialization-of-the-adc-analog-to-digital-converter">Initialization of the ADC (Analog to Digital Converter)</a></li>
+<li><a href="#adc-prescaler">ADC prescaler</a></li>
+<li><a href="#disabling-the-adc">Disabling the ADC</a></li>
+<li><a href="#getting-an-analog-value">Getting an analog value</a></li>
+<li><a href="#example">Example</a></li>
+<li><a href="#macros-explained">Macros explained</a></li>
+</ul>
+</li>
+<li><a href="#delay">Delay</a>
+<ul>
+<li><a href="#example-1">Example</a></li>
+</ul>
+</li>
+<li><a href="#digital">Digital</a></li>
+<li><a href="#main">Main</a></li>
+<li><a href="#serial">Serial</a></li>
+</ul>
+<div style="page-break-after: always;"></div>
+<h3 id="arduino-uno-pinout">Arduino Uno pinout </h3>
+<p><img src="Uno_Pinout.png" alt="Arduino Uno Pinout"><br>
+<a href="https://docs.arduino.cc/hardware/uno-rev3">Source</a></p>
+<div style="page-break-after: always;"></div>
+<h3 id="getting-started">Getting Started </h3>
+<h4 id="basic-blink-example">Basic blink example </h4>
+<p>This example will blink the LED on pin 13 (PB5) on the Arduino Uno every second.</p>
+<h5 id="code">Code </h5>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token keyword keyword-void">void</span> <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// This function is called once when the program starts</span>
+<span class="token punctuation">{</span>
+    <span class="token function">setPinMode</span><span class="token punctuation">(</span>LED_PORT<span class="token punctuation">,</span> LED_PIN<span class="token punctuation">,</span> OUTPUT<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Set the LED pin mode to OUTPUT</span>
+    <span class="token function">setPinState</span><span class="token punctuation">(</span>LED_PORT<span class="token punctuation">,</span> LED_PIN<span class="token punctuation">,</span> LOW<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Set the LED pin state to LOW</span>
+<span class="token punctuation">}</span>
+
+bool <span class="token function">loop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// This function is called every time the program loops</span>
+<span class="token punctuation">{</span>
+    <span class="token function">togglePinState</span><span class="token punctuation">(</span>LED_PORT<span class="token punctuation">,</span> LED_PIN<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Toggle the LED pin state</span>
+    <span class="token function">delayMs</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Delay for 1000 milliseconds</span>
+    <span class="token keyword keyword-return">return</span> true<span class="token punctuation">;</span> <span class="token comment">// Return true to keep looping</span>
+<span class="token punctuation">}</span>
+</code></pre><h5 id="explanation">Explanation </h5>
+<p>In this example, we are using the <code>setPinMode(uint8_t, uint8_t, PinMode_t)</code> function to set the LED pin mode to <code>OUTPUT</code>. The function has three parameters, which are the port number, pin number and pin mode. The port number is the port the pin is on, the pin number is the pin number of the pin and the pin mode is the mode you want to set the pin to. The pin mode can be <code>INPUT</code> or <code>OUTPUT</code>.</p>
+<div style="page-break-after: always;"></div>
+<h4 id="basic-analog-read-example">Basic analog read example </h4>
+<p>This example will read the analog value of pin A0 (PC0) on the Arduino Uno every second. Then it prints the value to the serial monitor.</p>
+<h5 id="code-1">Code </h5>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token keyword keyword-void">void</span> <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// This function is called once when the program starts</span>
+<span class="token punctuation">{</span>
+    <span class="token function">initADC</span><span class="token punctuation">(</span>ADC_PRESCALER_128<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Initialize the ADC with a prescaler of 128</span>
+    <span class="token function">initSerial</span><span class="token punctuation">(</span><span class="token number">9600</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Initialize the serial with a baud rate of 9600</span>
+<span class="token punctuation">}</span>
+
+bool <span class="token function">loop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// This function is called every time the program loops</span>
+<span class="token punctuation">{</span>
+    <span class="token class-name">uint16_t</span> adcValue <span class="token operator">=</span> <span class="token function">getAnalogValue</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Read the ADC value of pin A0</span>
+    <span class="token keyword keyword-char">char</span> buffer<span class="token punctuation">[</span>SERIAL_BUFFER_SIZE<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment">// Create a buffer to store the string</span>
+    <span class="token function">sprintf</span><span class="token punctuation">(</span>buffer<span class="token punctuation">,</span> <span class="token string">"ADC value: %d\n"</span><span class="token punctuation">,</span> adcValue<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Format the string</span>
+    <span class="token function">writeToSerial</span><span class="token punctuation">(</span>buffer<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Write the string to the serial</span>
+    <span class="token function">delayMs</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Delay for 1000 milliseconds</span>
+    <span class="token keyword keyword-return">return</span> true<span class="token punctuation">;</span> <span class="token comment">// Return true to keep looping</span>
+<span class="token punctuation">}</span>
+</code></pre><h5 id="explanation-1">Explanation </h5>
+<p>In this example, we enable the ADC and the Serial. Then we read the analog value of pin A0 and store it in a variable. Then we create a buffer to store the string we want to print to the serial. Then we format the string and write it to the serial. Then we delay for 1000 milliseconds and return true to keep looping.</p>
+<div style="page-break-after: always;"></div>
+<h4 id="basic-semi-dynamic-array-example">Basic semi-dynamic array example </h4>
+<p>This example shows how to use the semi-dynamic array functions. In this case a semi-dynamic array of <code>char</code> is used to generate a string. The string is then printed to the serial monitor.</p>
+<h5 id="code-2">Code </h5>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token keyword keyword-void">void</span> <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// This function is called once when the program starts</span>
+<span class="token punctuation">{</span>
+    <span class="token function">initSerial</span><span class="token punctuation">(</span><span class="token number">9600</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Initialize the serial with a baud rate of 9600</span>
+
+    <span class="token class-name">charArray_t</span> charArray<span class="token punctuation">;</span> <span class="token comment">// Create a charArray_t variable</span>
+
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token function">initCharArray</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>charArray<span class="token punctuation">,</span> <span class="token string">"Hello, world!\0"</span><span class="token punctuation">,</span> <span class="token number">14</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// Initialize the charArray_t variable</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">writeToSerial</span><span class="token punctuation">(</span>charArray<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Write the string to the serial</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword keyword-else">else</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">writeToSerial</span><span class="token punctuation">(</span><span class="token string">"Error initializing charArray!\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Write an error message to the serial</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token function">freeCharArray</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>charArray<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Free the charArray_t variable</span>
+<span class="token punctuation">}</span>
+</code></pre><h5 id="explanation-2">Explanation </h5>
+<p>In this example, we initialize the serial with a baud rate of 9600. Then we create a <code>charArray_t</code> variable. Then we initialize the <code>charArray_t</code> variable with the string <code>"Hello, world!\0"</code> and a length of 14. Then we check if the initialization was successful. If it was, we write the string to the serial. If it wasn't, we write an error message to the serial. Then we free the <code>charArray_t</code> variable.</p>
+<div style="page-break-after: always;"></div>
+<h3 id="analog">Analog </h3>
+<h4 id="initialization-of-the-adc-analog-to-digital-converter">Initialization of the ADC (Analog to Digital Converter) </h4>
+<p>To initialize the ADC, call the <code>initADC(ADC_Prescaler_t)</code> function. The function has one parameter, which is the ADC Prescaler.</p>
+<h4 id="adc-prescaler">ADC prescaler </h4>
+<p>You can set the prescaler when initializing the ADC. The prescaler can be set to 2, 4, 8, 16, 32, 64 or 128. The default setting is 128, which will give a 125 kHz ADC clock frequency when using the 16 MHz system clock.</p>
+<p>A faster ADC clock frequency will result in a higher resolution, but will also increase the power consumption. A slower ADC clock frequency will result in a lower resolution, but will also decrease the power consumption.</p>
+<h4 id="disabling-the-adc">Disabling the ADC </h4>
+<p>To disable the ADC, call the <code>disableADC()</code> function.</p>
+<h4 id="getting-an-analog-value">Getting an analog value </h4>
+<p>To get the ADC, call the <code>getAnalogValue(uint8_t)</code> function. The function has one parameter, which is the (channel) pin number of the ADC pin you want to read. The function will return the ADC value as an <code>uint16_t</code> value.</p>
+<h4 id="example">Example </h4>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token keyword keyword-void">void</span> <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token function">initADC</span><span class="token punctuation">(</span>ADC_PRESCALER_128<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Initialize the ADC with a prescaler of 128</span>
+    <span class="token comment">// Some code...</span>
+<span class="token punctuation">}</span>
+
+bool <span class="token function">loop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token class-name">uint16_t</span> adcValue <span class="token operator">=</span> <span class="token function">getAnalogValue</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Read the ADC value of pin A0</span>
+    <span class="token comment">// Some code...</span>
+<span class="token punctuation">}</span>
+</code></pre><div style="page-break-after: always;"></div>
+<h4 id="macros-explained">Macros explained </h4>
+<table>
+<thead>
+<tr>
+<th>Macro</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADC</td>
+<td>0x78 <br> or <br> 01111000</td>
+<td>The ADC Data Register (ADC) stores the result of the most recent ADC conversion. Once the conversion is complete, the digital value representing the analog input signal is placed in this register, making it available for further processing or retrieval.</td>
+</tr>
+<tr>
+<td>ADCSRA</td>
+<td>0x7A <br> or <br> 01111010</td>
+<td>The ADC Control and Status Register A (ADCSRA) is a critical register that governs the operation of the ADC. It enables or disables the ADC, triggers conversions, sets the prescaler for ADC clock division, and enables ADC interrupt. Additionally, it is used to check if the ADC has finished converting.</td>
+</tr>
+<tr>
+<td>ADEN</td>
+<td>0x07 <br> or <br> 00000111</td>
+<td>ADC Enable Bit (ADEN) is a bit in the ADCSRA register. Setting this bit enables the ADC. When ADEN is set, the ADC is enabled. When ADEN is cleared, the ADC is disabled.</td>
+</tr>
+<tr>
+<td>ADSC</td>
+<td>0x40 <br> or <br> 01000000</td>
+<td>ADC Start Conversion Bit (ADSC) is a bit in the ADCSRA register. Setting this bit initiates an ADC conversion. When ADSC is set, the ADC begins sampling and converting the analog input signal to a digital value.</td>
+</tr>
+<tr>
+<td>ADMUX</td>
+<td>0x7C <br> or <br> 01111100</td>
+<td>The ADC Multiplexer Selection Register (ADMUX) is responsible for selecting the input channel for the Analog-to-Digital Converter (ADC). A multiplexer, in this context, is a device that allows you to choose one of several analog signals and route it to the ADC for conversion.</td>
+</tr>
+<tr>
+<td>REFS0</td>
+<td>0x40 <br> or <br> 01000000</td>
+<td>Reference Selection Bit 0 (REFS0) is a bit in the ADMUX register. It is used to specify the reference voltage source for the ADC. In this case, when REFS0 is set, the reference voltage is derived from the AVCC pin, which is often connected to the supply voltage.</td>
+</tr>
+<tr>
+<td>RXEN0</td>
+<td>0x04 <br> or <br> 00000100</td>
+<td>Receiver Enable Bit (RXEN0) is a bit in the UCSR0B register. Setting this bit enables the USART receiver. When RXEN0 is set, the USART receiver is enabled. When RXEN0 is cleared, the USART receiver is disabled.</td>
+</tr>
+<tr>
+<td>TXEN0</td>
+<td>0x03 <br> or <br> 00000011</td>
+<td>Transmitter Enable Bit (TXEN0) is a bit in the UCSR0B register. Setting this bit enables the USART transmitter. When TXEN0 is set, the USART transmitter is enabled. When TXEN0 is cleared, the USART transmitter is disabled.</td>
+</tr>
+<tr>
+<td>UCSZ00</td>
+<td>0x01 <br> or <br> 00000001</td>
+<td>USART Character Size Bit 0 (UCSZ00) is a bit in the UCSR0C register. It is used to specify the number of data bits to be transmitted or received. In this case, when UCSZ00 is set, the USART will transmit or receive 8-bit characters.</td>
+</tr>
+<tr>
+<td>UCSZ01</td>
+<td>0x02 <br> or <br> 00000010</td>
+<td>USART Character Size Bit 1 (UCSZ01) is a bit in the UCSR0C register. It is used to specify the number of data bits to be transmitted or received. In this case, when UCSZ01 is set, the USART will transmit or receive 8-bit characters.</td>
+</tr>
+<tr>
+<td>UCSR0B</td>
+<td>0x1C <br> or <br> 00011100</td>
+<td>The USART Control and Status Register B (UCSR0B) is a critical register that governs the operation of the USART. It enables or disables the USART, enables the receiver and transmitter, and enables USART interrupt. Additionally, it is used to check if the USART has finished transmitting or receiving.</td>
+</tr>
+<tr>
+<td>UCSR0C</td>
+<td>0x2C <br> or <br> 00101100</td>
+<td>The USART Control and Status Register C (UCSR0C) is a critical register that governs the operation of the USART. It sets the USART mode of operation, sets the number of data bits, sets the parity mode, and sets the number of stop bits.</td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+<h3 id="delay">Delay </h3>
+<p>For now, the only delay function is <code>delayMs(uint16_t)</code>, which delays the program for the specified amount of milliseconds. The function has one parameter, which is the amount of milliseconds to delay.</p>
+<p>This is a blocking function, which means that the program will not do anything else while the function is running.</p>
+<h4 id="example-1">Example </h4>
+<pre data-role="codeBlock" data-info="c" class="language-c c"><code><span class="token keyword keyword-void">void</span> <span class="token function">setup</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// Some code...</span>
+<span class="token punctuation">}</span>
+
+bool <span class="token function">loop</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token comment">// Some code...</span>
+    <span class="token function">delayMs</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Delay for 1000 milliseconds</span>
+<span class="token punctuation">}</span>
+</code></pre><div style="page-break-after: always;"></div>
+<h3 id="digital">Digital </h3>
+<hr>
+<h3 id="main">Main </h3>
+<hr>
+<h3 id="serial">Serial </h3>
+<hr>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "hardware.h": "c",
+        "main.h": "c",
+        "io.h": "c",
+        "stdint.h": "c",
+        "serial.h": "c",
+        "string.h": "c"
+    }
+}
