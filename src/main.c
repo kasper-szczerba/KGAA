@@ -20,10 +20,16 @@ int main()
 void setup()
 {
     // Place your setup code here
+    initSerial(DEFAULT_BAUDRATE);
 }
 
 bool loop()
 {
     // Place your loop code here
+    char *data = readFromSerial();
+    writeToSerial(data);
+
+    delayMs(1000);
+
     return true; // Return false if an error occurred
 }

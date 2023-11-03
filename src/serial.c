@@ -32,22 +32,22 @@ void writeToSerial(char *data)
 char *readFromSerial()
 {
     static char buffer[SERIAL_BUFFER_SIZE];
+    memset(buffer, 0, SERIAL_BUFFER_SIZE);
     uint8_t i = 0;
-    bool isEndOfLine = false;
+    bool stayInLoop = true;
 
-    while (!isEndOfLine)
+    while (stayInLoop && i < SERIAL_BUFFER_SIZE - 1)
     {
-        // Wait for data to be received
-        while (!(UCSR0A & (1 << RXC0)))
-        {
-            // Do nothing
-        };
-        buffer[i] = UDR0;
-        if (buffer[i] == '\n')
-        {
-            isEndOfLine = true;
-            buffer[i] = '\0';
+        while (!(UCSR0A & (1 << RXC0))) {
+            // Wait for data to be received
         }
+        buffer[i] = UDR0;
+
+        if (buffer[i] == '\r' || buffer[i] == '\n') {
+            buffer[i] = '\0';
+            stayInLoop = false;
+        }
+
         i++;
     }
 
