@@ -27,7 +27,10 @@ uint16_t getAnalogValue(uint8_t pin)
     ADCSRA |= (1 << ADSC);
 
     // Wait for the conversion to complete
-    while (ADCSRA & (1 << ADSC)) {};
+    while (ADCSRA & (1 << ADSC))
+    {
+        // Do nothing
+    };
 
     // Return the result
     return ADC;

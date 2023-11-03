@@ -21,7 +21,9 @@ void writeToSerial(char *data)
     while (*data != '\0')
     {
         while (!isDataRegisterEmpty())
-            ;
+        {
+            // Do nothing
+        };
         UDR0 = *data;
         data++;
     }
@@ -36,7 +38,10 @@ char *readFromSerial()
     while (!isEndOfLine)
     {
         // Wait for data to be received
-        while (!(UCSR0A & (1 << RXC0))) {};
+        while (!(UCSR0A & (1 << RXC0)))
+        {
+            // Do nothing
+        };
         buffer[i] = UDR0;
         if (buffer[i] == '\n')
         {
@@ -49,4 +54,7 @@ char *readFromSerial()
     return buffer;
 }
 
-bool isDataRegisterEmpty() { return (UCSR0A & (1 << UDRE0)); }
+bool isDataRegisterEmpty()
+{
+    return (UCSR0A & (1 << UDRE0));
+}
