@@ -3,29 +3,34 @@
 
 #include "main.h"
 
+#define MAX_PIN_COUNT 7
+
 typedef enum
 {
     PORT_B,
     PORT_C,
-    PORT_D
+    PORT_D,
+    PORT_ERROR
 } port_t;
 
 typedef enum
 {
     INPUT,
     INPUT_PULLUP,
-    OUTPUT
+    OUTPUT,
+    MODE_ERROR
 } mode_t;
 
 typedef enum
 {
     LOW,
-    HIGH
+    HIGH,
+    STATE_ERROR
 } state_t;
 
-void setPinMode(port_t, uint8_t, mode_t);
-void setPinState(port_t, uint8_t, state_t);
-void togglePinState(port_t, uint8_t);
+mode_t setPinMode(port_t, uint8_t, mode_t);
+state_t setPinState(port_t, uint8_t, state_t);
+state_t togglePinState(port_t, uint8_t);
 state_t getPinState(port_t, uint8_t);
 
 #endif // __DIGITAL_H__
