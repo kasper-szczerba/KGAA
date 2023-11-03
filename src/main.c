@@ -10,8 +10,7 @@ int main()
     setup(); // Call the setup function once
 
     // Keep calling the loop function until it returns false
-    while (loop())
-        ;
+    while (loop()) {};
     return 0;
 }
 

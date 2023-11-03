@@ -8,6 +8,7 @@
 
 void initSerial(uint16_t);
 void writeToSerial(char *);
+char *readFromSerial();
 bool isDataRegisterEmpty();
 
 #endif // __SERIAL__

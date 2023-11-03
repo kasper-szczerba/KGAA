@@ -27,4 +27,26 @@ void writeToSerial(char *data)
     }
 }
 
+char *readFromSerial()
+{
+    static char buffer[SERIAL_BUFFER_SIZE];
+    uint8_t i = 0;
+    bool isEndOfLine = false;
+
+    while (!isEndOfLine)
+    {
+        // Wait for data to be received
+        while (!(UCSR0A & (1 << RXC0))) {};
+        buffer[i] = UDR0;
+        if (buffer[i] == '\n')
+        {
+            isEndOfLine = true;
+            buffer[i] = '\0';
+        }
+        i++;
+    }
+
+    return buffer;
+}
+
 bool isDataRegisterEmpty() { return (UCSR0A & (1 << UDRE0)); }

@@ -13,6 +13,7 @@ typedef enum
 typedef enum
 {
     INPUT,
+    INPUT_PULLUP,
     OUTPUT
 } mode_t;
 

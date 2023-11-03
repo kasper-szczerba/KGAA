@@ -27,6 +27,10 @@ void setPinMode(port_t port, uint8_t pin, mode_t mode)
     case INPUT:
         *ddr &= ~(1 << pin); // Clear the bit
         break;
+    case INPUT_PULLUP:
+        *ddr &= ~(1 << pin); // Clear the bit
+        setPinState(port, pin, HIGH);
+        break;
     case OUTPUT:
         *ddr |= (1 << pin); // Set the bit
         break;
