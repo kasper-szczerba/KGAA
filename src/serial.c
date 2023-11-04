@@ -18,7 +18,7 @@ void initSerial(uint16_t baudrate)
 
 void writeToSerial(char *data)
 {
-    while (*data != '\0')
+    while (*data != STRING_TERMINATOR)
     {
         while (!isDataRegisterEmpty())
         {
@@ -43,8 +43,8 @@ char *readFromSerial()
         }
         buffer[i] = UDR0;
 
-        if (buffer[i] == '\r' || buffer[i] == '\n') {
-            buffer[i] = '\0';
+        if (buffer[i] == CARRIAGE_RETURN || buffer[i] == NEW_LINE) {
+            buffer[i] = STRING_TERMINATOR;
             stayInLoop = false;
         }
 
