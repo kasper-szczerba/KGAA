@@ -23,7 +23,7 @@ void writeToSerial(char *data)
         while (!isDataRegisterEmpty())
         {
             // Do nothing
-        };
+        }
         UDR0 = *data;
         data++;
     }

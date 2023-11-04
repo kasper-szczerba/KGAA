@@ -13,7 +13,7 @@ int main()
     while (loop())
     {
         // Do nothing
-    };
+    }
     return 0;
 }
 
@@ -26,10 +26,6 @@ void setup()
 bool loop()
 {
     // Place your loop code here
-    char *data = readFromSerial();
-    writeToSerial(data);
-
-    delayMs(1000);
 
     return true; // Return false if an error occurred
 }
